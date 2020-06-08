@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" onclick="Create()" value="Кнопка">
+<input type="button" onclick="removeLastChild()" style="width: 210px;" value="Удалить элемент" /><br />
+<div id="div1"></div>
+<script>
+    // Задание 2
+    // Создайте страницу с кнопкой, при нажатии по кнопке на странице должен создаваться параграф с
+    // произвольным текстом. После создания 10 параграфов все они должны быть удалены.
+    let e=0;
+   function Create() {
+        let p1=document.createElement("p");
+        let divv=document.getElementById("div1");
+        let item=divv.firstChild;
+         if (e===10){
+             e=0;
+             for (let i=0; i<10; i++){
+                 let list = document.getElementById("div1");
+                 let item = list.lastChild;
+                 if (item != null) {
+                     list.removeChild(item);
+                 }
+             }
+       }
+         else {
+             p1.innerHTML = "Paragraph 1";
+             divv.appendChild(p1);
+             e++;
+         }
+       console.log(e)
+       }
+
+</script>
+</body>
+</html>

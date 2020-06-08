@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p name="par">
+    ПАРАГРАФ 1
+</p>
+<p name="par">
+    ПАРАГРАФ 2
+</p>
+<p name="par">
+    ПАРАГРАФ 3
+</p>
+<script>
+    //вариант 1
+    // window.onload=function(){
+    //     let parag=document.getElementsByName("par");
+    //     for (i=0; i<parag.length; i++){
+    //         parag[i].innerHTML="PARAGRAPH";
+    //     }
+    //     console.dir(document.getElementsByName("par"))
+    // };
+    //вариант 2
+    par={};
+    par = document.getElementsByName("par");
+    par.f = function () {
+        for (i=0; i<par.length; i++){
+            par[i].innerHTML="PARAGRAPH";
+        }
+    };
+    par.f();
+
+</script>
+</body>
+</html>
